@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import axios from 'axios'
 
- type Animal = {
+type Animal = {
     id: number;
     name: string,
     image: string,
@@ -15,9 +15,15 @@ export const animalApi = createApi({
     baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3004' }),
     tagTypes: ['Animals'],
     endpoints: (builder) => ({
-        getAnimals: builder.query<AllAnimals, void>({
-            query: () => `/animals`,
-            transformResponse: (res: Animal[]) => res.sort((a:Animal, b:Animal) => b.id - a.id),
+        getAnimals: builder.query<AllAnimals, string>({
+            query: (a) => {
+                if (a.length === 0) {
+                    return "/animals"
+                } else {
+                    return `/animals?species_like=${a}`
+                }
+            },
+            transformResponse: (res: Animal[]) => res.sort((a: Animal, b: Animal) => b.id - a.id),
             providesTags: ['Animals']
         }),
         addAnimal: builder.mutation<Animal, {}>({
@@ -45,6 +51,6 @@ export const {
     useGetAnimalsQuery,
     useAddAnimalMutation,
     useDeleteAnimalMutation,
- 
+
 } = animalApi
 

@@ -9,7 +9,7 @@ const {
     data: animals,
     isLoading, 
     isSuccess,
-} = useGetAnimalsQuery()
+} = useGetAnimalsQuery(searchValue)
 
 const [deleteAnimal] = useDeleteAnimalMutation()
 
