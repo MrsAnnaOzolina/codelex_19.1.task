@@ -1,9 +1,10 @@
 
-// import { useState } from "react"
+import { useState } from "react"
 import { useGetAnimalsQuery, useDeleteAnimalMutation } from "./api/apiSlice";
 
 const Table =() => {
 
+const [searchValue, setSearchValue] = useState("")
 const {
     data: animals,
     isLoading, 
@@ -11,9 +12,12 @@ const {
 } = useGetAnimalsQuery()
 
 const [deleteAnimal] = useDeleteAnimalMutation()
-// const [searchAnimal] = useSearchAnimalQuery()
 
-
+const onSubmitSearchValue = (e: { preventDefault: () => void; })=> {
+    e.preventDefault();
+   
+console.log(searchValue)
+}
 let content;
 if (isLoading) {
     return  <p>Loading...</p>
@@ -39,14 +43,14 @@ return (
    
    <div>
     <form 
-    
+    onSubmit={(e)=>onSubmitSearchValue(e)}
     >
     <label htmlFor="">
     Search  your favorite species
     </label>
     <input type="text"  
     placeholder="search species" 
-    // onChange={(e)=> {searchAnimal({value: e.target.value })}}  
+    onChange={(e)=> { setSearchValue(e.target.value) }}  
     />
     </form>
  

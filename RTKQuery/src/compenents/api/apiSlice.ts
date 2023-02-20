@@ -20,10 +20,6 @@ export const animalApi = createApi({
             transformResponse: (res: Animal[]) => res.sort((a:Animal, b:Animal) => b.id - a.id),
             providesTags: ['Animals']
         }),
-        //   searchAnimal: builder.query<Animal, any>({
-        //     query: ({value}) => `/animals?species_like=${value}`,
-        //     providesTags: ['Animals']
-        // }),
         addAnimal: builder.mutation<Animal, {}>({
             query: (animal) => ({
                 url: '/animals',
@@ -43,16 +39,12 @@ export const animalApi = createApi({
 
 
     }),
-
-
-
-
 })
 
 export const {
     useGetAnimalsQuery,
     useAddAnimalMutation,
     useDeleteAnimalMutation,
-    // useSearchAnimalQuery
+ 
 } = animalApi
 

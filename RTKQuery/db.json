@@ -17,6 +17,12 @@
       "image": "https://a-z-animals.com/media/2019/11/Mouse-header.jpg",
       "species": "Cricetid Rodent",
       "id": 4
+    },
+    {
+      "name": "mouse",
+      "image": "https://www.hepper.com/wp-content/uploads/2021/11/weimaraner-outdoor.jpg",
+      "species": "Cricetid Rodent",
+      "id": 6
     }
   ]
 }
