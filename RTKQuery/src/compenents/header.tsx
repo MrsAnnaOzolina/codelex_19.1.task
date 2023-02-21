@@ -2,8 +2,8 @@ import { useState, useEffect } from "react"
 import { v4 as uuidv4 } from 'uuid';
 
 
-import { useAddAnimalMutation } from "./api/apiSlice";
-
+import { useAddAnimalMutation ,useGetSpeciesQuery,useAddSpeciesMutation} from "./api/animalApiSlice";
+// import {  } from "./api/speciesApiSlice"
 
 const Values = {
   id: "",
@@ -16,6 +16,10 @@ function Header() {
   const [showAddAnimalInput, setShowAddAnimalInput] = useState(false)
   const [valuesToSave, setValuesToSave] = useState(Values)
   const [addAnimal] = useAddAnimalMutation()
+  const [showSpeciesForm, setShowSpeciesForm] = useState(false);
+
+  const speciesData = useGetSpeciesQuery().data
+  const [addNewSpecies] = useAddSpeciesMutation()
 
   const handleInputChange = (g: React.ChangeEvent<HTMLInputElement>| React.ChangeEvent<HTMLSelectElement>) => {
     const target = g.target;
@@ -53,7 +57,13 @@ function Header() {
         image: valuesToSave.image,
         species: valuesToSave.species
     })
+
+    if (!speciesData.includes(valuesToSave.species)){
+      addNewSpecies({species:valuesToSave.species})
+    }
     setShowAddAnimalInput(false);
+    setShowSpeciesForm(false);
+    window.location.reload()
   }
   
   }
@@ -87,29 +97,39 @@ function Header() {
               name="image"
               onChange={(e) => handleInputChange(e)}
             />
-            <label htmlFor="">Choose species</label>
-            <select
-              id="ageRangeField"
-              name="species"
+         { showSpeciesForm ? 
+              <>
+            <label>Add species
+            <input 
+            type="text"
+            placeholder="Animal species"
+            name="species"
+            onChange={(e) => handleInputChange(e)}
+            />
+            </label>
+            </>
+            //  : " not value"
+             : 
+            (
+              <>
+              <label htmlFor=""> Choose Species 
+              <button
+               className="button button-clear"
+              onClick={ () => setShowSpeciesForm(true)}
+              > add new species</button>
+              </label>
+              <select 
+              name="species" 
               onChange={(e) => handleInputChange(e)}
-            >
-              <option value="Bovid">Bovid</option>
-              <option value="Feline">Feline</option>
-              <option value="Canine">Canine</option>
-              <option value="Mustelid">Mustelid</option>
-              <option value="Hominid">Hominid</option>
-              <option value="Cricetid Rodent">Cricetid rodent</option>
-              <option value="Cervid">Cervid</option>
-              <option value="Beaver">Beaver</option>
-              <option value="Hyena">Hyene</option>
-              <option value="Hippopotamus">Hippopotamus</option>
-              <option value="Procyonid">Procyonid</option>
-              <option value="Manatee">Manatee</option>
-              <option value="Anteater">Anteater</option>
-              <option value="Cebidae">Cebidae</option>
-              <option value="Viverrid">Viverid</option>
-              <option value="Cercopithecidea">Cercopithecidea</option>
-            </select>
+              >
+              <option value="" disabled>Select dropdiwn</option>
+             {speciesData.map(items => (
+              <option key={items.id} value={items.species}>{items.species}</option>
+             ))}
+              </select>
+              </>
+            )
+            }
             <button>save my values</button>
           </form>
         </>

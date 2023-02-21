@@ -1,6 +1,6 @@
 
 import { useState } from "react"
-import { useGetAnimalsQuery, useDeleteAnimalMutation } from "./api/apiSlice";
+import { useGetAnimalsQuery, useDeleteAnimalMutation } from "./api/animalApiSlice";
 
 const Table =() => {
 

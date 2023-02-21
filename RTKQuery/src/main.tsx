@@ -6,12 +6,14 @@ import App from './App'
 // import { Provider } from 'react-redux'
 
 import {ApiProvider} from '@reduxjs/toolkit/query/react'
-import {animalApi} from './compenents/api/apiSlice'
+import {animalApi} from './compenents/api/animalApiSlice'
+// import {speciesApi} from './compenents/api/speciesApiSlice'
 
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <ApiProvider api={animalApi} >
+
     <App />
     </ApiProvider>
   </React.StrictMode>,

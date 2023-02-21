@@ -9,7 +9,7 @@
     {
       "name": "Cat",
       "image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cute-cat-photos-1593441022.jpg?crop=0.670xw:1.00xh;0.167xw,0&resize=640:*",
-      "species": "feline",
+      "species": "Feline",
       "id": 2
     },
     {
@@ -22,6 +22,68 @@
       "name": "dear",
       "image": "https://thumbs.dreamstime.com/b/roe-dear-13366119.jpg",
       "species": "Cervid",
+      "id": 7
+    },
+    {
+      "name": "monkey",
+      "image": "https://t3.ftcdn.net/jpg/00/28/08/40/360_F_28084010_bGRJetPfBwNcO3YuRC2C3Pz7qASocWQ4.jpg",
+      "species": "Cebidea",
+      "id": 8
+    },
+    {
+      "name": "Monkey",
+      "image": "https://media.gettyimages.com/id/1189192456/photo/baboon-in-galwar-bagh-the-temple-of-the-monkeys-in-jaipur-rajasthan-india.jpg?s=612x612&w=gi&k=20&c=taPvpVoCM2lz9s7t3DP5M2cQmdN3Nyu8DixGZObh-b4=",
+      "species": "Cebidea",
+      "id": 9
+    },
+    {
+      "name": "monkey",
+      "image": "https://media.gettyimages.com/id/1357248403/photo/macaca-fascicularis-long-tail-macaque.jpg?s=612x612&w=gi&k=20&c=mcA8s0mTWbw9KXrbK5Fk9CSSWtW6vmIFF5cCQxzuf9k=",
+      "species": "Cebidea",
+      "id": 10
+    },
+    {
+      "name": "Serum",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/44/Mustela.erminea.jpg",
+      "species": "Mustelid",
+      "id": 11
+    },
+    {
+      "name": "Beaver",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/6b/American_Beaver.jpg",
+      "species": "Beaver",
+      "id": 12
+    },
+    {
+      "name": "Hyena",
+      "image": "https://site-547756.mozfiles.com/files/547756/medium/Hyena.jpg",
+      "species": "Hyena",
+      "id": 13
+    }
+  ],
+  "species": [
+    {
+      "id": 1,
+      "species": "Canine"
+    },
+    {
+      "id": 2,
+      "species": "Feline"
+    },
+    {
+      "species": "Cebidea",
+      "id": 4
+    },
+    {
+      "species": "Mustelid",
+      "id": 5
+    },
+    {
+      "species": "Beaver",
+      "id": 6
+    },
+    {
+      "species": "Hyena",
       "id": 7
     }
   ]

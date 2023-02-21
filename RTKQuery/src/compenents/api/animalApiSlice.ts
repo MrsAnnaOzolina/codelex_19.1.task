@@ -10,6 +10,13 @@ type Animal = {
 
 type AllAnimals = Animal[]
 
+type OneSpecies = {
+    id: number;
+    species: string,
+}
+
+type AllSpecies = OneSpecies[]
+
 export const animalApi = createApi({
     reducerPath: 'animalApi',
     baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3004' }),
@@ -42,7 +49,17 @@ export const animalApi = createApi({
             }),
             invalidatesTags: ['Animals']
         }),
-
+        getSpecies: builder.query<AllSpecies, void>({
+            query: (a) =>  "/species",
+            // providesTags: ['Species']
+        }),
+        addSpecies: builder.mutation<OneSpecies, {}>({
+            query: (species) => ({
+                url: '/species',
+                method: 'POST',
+                body: species
+            }),
+        }),
 
     }),
 })
@@ -51,6 +68,7 @@ export const {
     useGetAnimalsQuery,
     useAddAnimalMutation,
     useDeleteAnimalMutation,
-
+    useGetSpeciesQuery,
+    useAddSpeciesMutation
 } = animalApi
 
