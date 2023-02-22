@@ -25,22 +25,10 @@
       "id": 7
     },
     {
-      "name": "monkey",
-      "image": "https://t3.ftcdn.net/jpg/00/28/08/40/360_F_28084010_bGRJetPfBwNcO3YuRC2C3Pz7qASocWQ4.jpg",
-      "species": "Cebidea",
-      "id": 8
-    },
-    {
       "name": "Monkey",
       "image": "https://media.gettyimages.com/id/1189192456/photo/baboon-in-galwar-bagh-the-temple-of-the-monkeys-in-jaipur-rajasthan-india.jpg?s=612x612&w=gi&k=20&c=taPvpVoCM2lz9s7t3DP5M2cQmdN3Nyu8DixGZObh-b4=",
       "species": "Cebidea",
       "id": 9
-    },
-    {
-      "name": "monkey",
-      "image": "https://media.gettyimages.com/id/1357248403/photo/macaca-fascicularis-long-tail-macaque.jpg?s=612x612&w=gi&k=20&c=mcA8s0mTWbw9KXrbK5Fk9CSSWtW6vmIFF5cCQxzuf9k=",
-      "species": "Cebidea",
-      "id": 10
     },
     {
       "name": "Serum",
@@ -59,17 +47,45 @@
       "image": "https://site-547756.mozfiles.com/files/547756/medium/Hyena.jpg",
       "species": "Hyena",
       "id": 13
+    },
+    {
+      "name": "Goriila",
+      "image": "https://cdn.britannica.com/79/20279-050-ECDF21A7/mountain-gorilla-Virunga-National-Park-Democratic-Republic.jpg",
+      "species": "Hominid",
+      "id": 14
+    },
+    {
+      "name": "Gorilla",
+      "image": "https://cdn.britannica.com/79/20279-050-ECDF21A7/mountain-gorilla-Virunga-National-Park-Democratic-Republic.jpg",
+      "species": "Hominid",
+      "id": 15
+    },
+    {
+      "name": "Dog",
+      "image": "https://www.hepper.com/wp-content/uploads/2021/11/weimaraner-outdoor.jpg",
+      "species": "Canine",
+      "id": 17
+    },
+    {
+      "name": "dog",
+      "image": "https://www.hepper.com/wp-content/uploads/2021/11/weimaraner-outdoor.jpg",
+      "species": "Canine",
+      "id": 18
+    },
+    {
+      "name": "Dog",
+      "image": "https://www.hepper.com/wp-content/uploads/2021/11/weimaraner-outdoor.jpg",
+      "species": "Canine",
+      "id": 19
+    },
+    {
+      "name": "cat",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Cat_August_2010-4.jpg/1200px-Cat_August_2010-4.jpg",
+      "species": "Feline",
+      "id": 20
     }
   ],
   "species": [
-    {
-      "id": 1,
-      "species": "Canine"
-    },
-    {
-      "id": 2,
-      "species": "Feline"
-    },
     {
       "species": "Cebidea",
       "id": 4
@@ -85,6 +101,18 @@
     {
       "species": "Hyena",
       "id": 7
+    },
+    {
+      "species": "Hominid",
+      "id": 8
+    },
+    {
+      "species": "Canine",
+      "id": 9
+    },
+    {
+      "species": "Feline",
+      "id": 10
     }
   ]
 }

@@ -43,6 +43,7 @@ return (
    
    <div>
     <form 
+    style={{margin: "40px"}}
     onSubmit={(e)=>onSubmitSearchValue(e)}
     >
     <label htmlFor="">

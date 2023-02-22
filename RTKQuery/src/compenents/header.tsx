@@ -3,10 +3,9 @@ import { v4 as uuidv4 } from 'uuid';
 
 
 import { useAddAnimalMutation ,useGetSpeciesQuery,useAddSpeciesMutation} from "./api/animalApiSlice";
-// import {  } from "./api/speciesApiSlice"
 
 const Values = {
-  id: "",
+  id: 0,
   name: "",
   image: "",
   species: ""
@@ -58,16 +57,20 @@ function Header() {
         species: valuesToSave.species
     })
 
-    if (!speciesData.includes(valuesToSave.species)){
+    //@ts-ignore
+    if (!speciesData?.includes(valuesToSave.species)){
       addNewSpecies({species:valuesToSave.species})
     }
+
     setShowAddAnimalInput(false);
     setShowSpeciesForm(false);
     window.location.reload()
   }
   
+  
   }
 
+  
   return (
 
     <section className="Section container" id="hero" style={{ display: "grid", justifyContent: "center" }}>
@@ -108,7 +111,6 @@ function Header() {
             />
             </label>
             </>
-            //  : " not value"
              : 
             (
               <>
@@ -123,7 +125,7 @@ function Header() {
               onChange={(e) => handleInputChange(e)}
               >
               <option value="" disabled>Select dropdiwn</option>
-             {speciesData.map(items => (
+             {speciesData?.map(items => (
               <option key={items.id} value={items.species}>{items.species}</option>
              ))}
               </select>
