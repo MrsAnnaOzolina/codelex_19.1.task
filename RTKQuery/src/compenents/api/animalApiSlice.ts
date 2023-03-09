@@ -15,11 +15,10 @@ type OneSpecies = {
     species: string,
 }
 
-
 export const animalApi = createApi({
     reducerPath: 'animalApi',
     baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3004' }),
-    tagTypes: ['Animals',"Species"],
+    tagTypes: ['Animals', "Species"],
     endpoints: (builder) => ({
         getAnimals: builder.query<AllAnimals, string>({
             query: (a) => {
@@ -48,20 +47,18 @@ export const animalApi = createApi({
             }),
             invalidatesTags: ['Animals']
         }),
-        getSpecies: builder.query<OneSpecies[], void| string >({
-            query: (a) =>  "/species",
-             providesTags: ['Species']
+        getSpecies: builder.query<OneSpecies[], void | string>({
+            query: (a) => "/species",
+            providesTags: ['Species']
         }),
         addSpecies: builder.mutation<OneSpecies, {}>({
             query: (species) => ({
                 url: '/species',
                 method: 'POST',
                 body: species
-
             }),
             invalidatesTags: ['Species']
         }),
-
     }),
 })
 
