@@ -15,7 +15,6 @@ type OneSpecies = {
     species: string,
 }
 
-type AllSpecies = OneSpecies[]
 
 export const animalApi = createApi({
     reducerPath: 'animalApi',

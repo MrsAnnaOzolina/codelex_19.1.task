@@ -1,18 +1,6 @@
 {
   "animals": [
     {
-      "name": "dog",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmtG1aTa9RLWZjJiw7nct27KOB_RjHkSz0aWNKCpGv&s",
-      "species": "canine",
-      "id": 1
-    },
-    {
-      "name": "Cat",
-      "image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cute-cat-photos-1593441022.jpg?crop=0.670xw:1.00xh;0.167xw,0&resize=640:*",
-      "species": "Feline",
-      "id": 2
-    },
-    {
       "name": "mouse",
       "image": "https://a-z-animals.com/media/2019/11/Mouse-header.jpg",
       "species": "Cricetid Rodent",
@@ -71,18 +59,6 @@
       "image": "https://www.hepper.com/wp-content/uploads/2021/11/weimaraner-outdoor.jpg",
       "species": "Canine",
       "id": 18
-    },
-    {
-      "name": "Dog",
-      "image": "https://www.hepper.com/wp-content/uploads/2021/11/weimaraner-outdoor.jpg",
-      "species": "Canine",
-      "id": 19
-    },
-    {
-      "name": "cat",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Cat_August_2010-4.jpg/1200px-Cat_August_2010-4.jpg",
-      "species": "Feline",
-      "id": 20
     }
   ],
   "species": [
@@ -113,6 +89,14 @@
     {
       "species": "Feline",
       "id": 10
+    },
+    {
+      "species": "Feline",
+      "id": 11
+    },
+    {
+      "species": "Feline",
+      "id": 12
     }
   ]
 }
